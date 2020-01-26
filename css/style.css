@@ -46,16 +46,16 @@ main {
   grid-area: main;
 }
 aside {
-  grid-area: sidebar;
+  grid-area: aside;
   align-self: start;
   justify-self: center;
+
 }
 footer {
   grid-area: footer;
   align-self: center;
   justify-self: center;
   height: 150px;
-  width: 100%;
 }
 
 .nav-container {
@@ -79,6 +79,12 @@ footer {
   grid-template-areas:
     "main main main aside"
     "footer footer footer footer";
+  grid-column-gap: 15px;
+}
+
+.main-container--product {
+  max-width:1024px;
+  margin: 0 auto;
 }
 
 
@@ -116,9 +122,19 @@ nav li a:hover {
   color: crimson;
 }
 
-
+.hero--index {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/space_needle.jpeg");
+}
+.hero--about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/ian-schneider-TamMbr4okv4-unsplash.jpg");
+}
+.hero--contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/william-iven-SpVHcbuKi6E-unsplash.jpg");
+}
+.hero--products {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/brandless-dQ_b1I6xm3Q-unsplash.jpg");
+}
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("../img/space_needle.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,23 +172,29 @@ nav li a:hover {
 main h1 {
   font-size: 3em;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
 }
 
 main h2 {
   font-size: 2.5em;
   font-family: 'Roboto', sans-serif;
+  margin-top: 0;
 }
 
-main h6 {
+aside h6 {
   font-size: 2em;
   font-family: 'Roboto', sans-serif;
   margin-bottom: .5em;
+  text-align: center;
 
 }
 
 main p {
   font-size: 1.5em;
   font-family: 'Roboto', sans-serif;
+  margin-right: 25px;
+  text-align: justify;
+
 }
 
 .primary-btn {
@@ -181,5 +203,29 @@ main p {
   font-size: 2em;
   font-family: 'Roboto Mono', monospace;
   text-transform: uppercase;
+}
 
+.primary-btn:hover {
+  color: white;
+  background-color: crimson;
+}
+
+.profile-picture {
+  width:100px;
+  height: 100px;
+  margin: 25px auto 0;
+}
+.product-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.product-box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  color: white;
+  padding: 7px;
+  margin: 7px;
 }
