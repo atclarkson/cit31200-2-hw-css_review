@@ -95,6 +95,16 @@ header h1 {
   padding:0;
 }
 
+header a,
+header a:hover,
+header a:focus,
+header a:active,
+header a:visited {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+}
+
 
 nav ul {
   list-style-type: none;
@@ -120,6 +130,10 @@ nav li a {
 
 nav li a:hover {
   color: crimson;
+}
+
+nav li .active {
+  color: darkred;
 }
 
 .hero--index {
